@@ -38,3 +38,5 @@ exportDir: "export"
 packagesDir: "packages"
 publicDir: "public"
 sourceDir: "source"
+
+outputExt: ".php"

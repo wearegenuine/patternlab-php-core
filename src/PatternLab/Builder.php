@@ -241,6 +241,10 @@ class Builder {
 				$path          = $patternStoreData["pathDash"];
 				$pathName      = (isset($patternStoreData["pseudo"])) ? $patternStoreData["pathOrig"] : $patternStoreData["pathName"];
 				
+				
+				$outputExt = Config::getOption("outputExt");
+				
+				
 				// modify the pattern mark-up
 				$markup        = $patternStoreData["code"];
 				$markupEncoded = htmlentities($markup,ENT_COMPAT,"UTF-8");
@@ -253,9 +257,9 @@ class Builder {
 				}
 				
 				// write out the various pattern files
-				file_put_contents($patternPublicDir."/".$path."/".$path.".html",$markupFull);
+				file_put_contents($patternPublicDir."/".$path."/".$path.$outputExt,$markupFull);
 				if (!$exportFiles) {
-					file_put_contents($patternPublicDir."/".$path."/".$path.".escaped.html",$markupEncoded);
+					file_put_contents($patternPublicDir."/".$path."/".$path.".escaped".$outputExt,$markupEncoded);
 					file_put_contents($patternPublicDir."/".$path."/".$path.".".$patternExtension,$markupEngine);
 				}
 				/*

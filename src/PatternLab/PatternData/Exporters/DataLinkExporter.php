@@ -12,6 +12,7 @@
 
 namespace PatternLab\PatternData\Exporters;
 
+use \PatternLab\Config;
 use \PatternLab\Data;
 use \PatternLab\PatternData;
 use \PatternLab\Timer;
@@ -27,11 +28,13 @@ class DataLinkExporter extends \PatternLab\PatternData\Exporter {
 	public function run() {
 		
 		$store = PatternData::get();
+		$outputExt = Config::getOption("outputExt");
+		
 		foreach ($store as $patternStoreKey => $patternStoreData) {
 			
 			if ($patternStoreData["category"] == "pattern") {
 				
-				$value = "../../".$patternStoreData["pathDash"]."/".$patternStoreData["pathDash"].".html";
+				$value = "../../".$patternStoreData["pathDash"]."/".$patternStoreData["pathDash"].$outputExt;
 				Data::setOptionLink($patternStoreKey, $value);
 				
 			}

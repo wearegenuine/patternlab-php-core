@@ -38,6 +38,7 @@ class PatternPartialsExporter extends \PatternLab\PatternData\Exporter {
 		// default vars
 		$patternPartials    = array();
 		$styleGuideExcludes = Config::getOption("styleGuideExcludes");
+		$outputExt = Config::getOption("outputExt");
 		
 		$store = PatternData::get();
 		foreach ($store as $patternStoreKey => $patternStoreData) {
@@ -48,7 +49,7 @@ class PatternPartialsExporter extends \PatternLab\PatternData\Exporter {
 					
 					$patternPartialData                            = array();
 					$patternPartialData["patternName"]             = ucwords($patternStoreData["nameClean"]);
-					$patternPartialData["patternLink"]             = $patternStoreData["pathDash"]."/".$patternStoreData["pathDash"].".html";
+					$patternPartialData["patternLink"]             = $patternStoreData["pathDash"]."/".$patternStoreData["pathDash"].$outputExt;
 					$patternPartialData["patternPartial"]          = $patternStoreData["partial"];
 					$patternPartialData["patternPartialCode"]      = $patternStoreData["code"];
 					

@@ -35,6 +35,8 @@ class NavItemsExporter extends \PatternLab\PatternData\Exporter {
 		$navItems                 = array();
 		$navItems["patternTypes"] = array();
 		
+		$outputExt = Config::getOption("outputExt");
+		
 		// iterate over the different categories and add them to the navigation
 		$store = PatternData::get();
 		foreach ($store as $patternStoreKey => $patternStoreData) {
@@ -77,7 +79,7 @@ class NavItemsExporter extends \PatternLab\PatternData\Exporter {
 				if (!$patternStoreData["hidden"]) {
 					
 					// set-up the info for the nav
-					$patternInfo = array("patternPath"    => $patternStoreData["pathDash"]."/".$patternStoreData["pathDash"].".html",
+					$patternInfo = array("patternPath"    => $patternStoreData["pathDash"]."/".$patternStoreData["pathDash"].$outputExt,
 										 "patternSrcPath" => $patternStoreData["pathName"],
 										 "patternName"    => ucwords($patternStoreData["nameClean"]),
 										 "patternState"   => $patternStoreData["state"],

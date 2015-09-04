@@ -208,6 +208,7 @@ class Config {
 		self::setExposedOption("ishMaximum");
 		self::setExposedOption("ishMinimum");
 		self::setExposedOption("patternExtension");
+		self::setExposedOption("outputExt");
 		
 	}
 	
