@@ -35,7 +35,7 @@ cacheBusterOn: "true"
 
 # project directories
 exportDir: "export"
-packagesDir: "packages"
+packagesDir: "vendor"
 publicDir: "public"
 sourceDir: "source"
 
