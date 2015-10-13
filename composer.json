@@ -1,5 +1,5 @@
 {
-	"name":             "wearegenuine/core",
+	"name":             "pattern-lab/core",
 	"description":      "The core functionality for Pattern Lab.",
 	"keywords":         ["pattern lab", "styleguide", "style guide", "atomic", "atomic design"],
 	"homepage":         "http://patternlab.io",
