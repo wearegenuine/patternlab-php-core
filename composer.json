@@ -32,13 +32,13 @@
 	"require": {
 		"php": ">=5.3.6",
 		"michelf/php-markdown": "~1.4",
-		"symfony/yaml": "~2.6.4",
+		"symfony/yaml": "~2.7.4",
 		"seld/jsonlint": "~1.1",
 		"symfony/event-dispatcher": "~2.5",
 		"symfony/filesystem": "~2.5",
 		"symfony/finder": "~2.5",
 		"kevinlebrun/colors.php": "~0.4",
-		"pattern-lab/unified-asset-installer": "~0.5",
+		"pattern-lab/unified-asset-installer": "dev-dev",
 		"alchemy/zippy": "~0.2.1"
 	}
 }
